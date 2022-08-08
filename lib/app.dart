@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/config/themes/app_theme.dart';
-import 'package:quotes_app/core/utils/app_strings.dart';
+import 'package:quotes_app/config/routes/app_routes.dart';
+import 'config/themes/app_theme.dart';
+import 'core/utils/app_strings.dart';
 
-import 'features/random_quotes/presentation/screens/qoute_screen.dart';
 
 class QouteApp extends StatelessWidget {
   const QouteApp({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class QouteApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
       theme: appTheme(),
-      home: const QouteScreen(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }
