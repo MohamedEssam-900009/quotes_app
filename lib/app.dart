@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/core/utils/app_colors.dart';
 import 'package:quotes_app/core/utils/app_strings.dart';
+import 'package:quotes_app/core/utils/hex_color.dart';
 
 import 'features/random_quotes/presentation/screens/qoute_screen.dart';
 
@@ -13,7 +14,7 @@ class QouteApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
       theme: ThemeData(
-        primaryColor: AppColors.primary,
+        primaryColor: HexColor('#451BAB'),
       ),
       home: const QouteScreen(),
     );
