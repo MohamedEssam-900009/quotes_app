@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quotes_app/core/utils/assets_manger.dart';
 
 class QouteScreen extends StatefulWidget {
   const QouteScreen({Key? key}) : super(key: key);
@@ -12,13 +13,7 @@ class _QouteScreenState extends State<QouteScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          'Qoute',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 25,
-          ),
-        ),
+        child: Image.asset(ImgAssets.qoute)
       ),
     );
   }
