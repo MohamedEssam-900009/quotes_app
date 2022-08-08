@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/core/utils/app_colors.dart';
+import 'package:quotes_app/core/utils/app_strings.dart';
 
 ThemeData appTheme(){
   return ThemeData(
@@ -7,6 +8,7 @@ ThemeData appTheme(){
     hintColor: AppColors.hint,
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
+    fontFamily: AppStrings.fontFamily,
     textTheme: const TextTheme(
       button: TextStyle(
         fontSize: 16,
