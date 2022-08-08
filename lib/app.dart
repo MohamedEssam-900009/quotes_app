@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/features/random_quotes/presentation/screens/qoute_screen.dart';
+import 'package:quotes_app/core/utils/app_strings.dart';
+
+import 'features/random_quotes/presentation/screens/qoute_screen.dart';
 
 class QouteApp extends StatelessWidget {
   const QouteApp({Key? key}) : super(key: key);
@@ -8,7 +10,7 @@ class QouteApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Quotes App',
+      title: AppStrings.appName,
       home: QouteScreen(),
     );
   }
