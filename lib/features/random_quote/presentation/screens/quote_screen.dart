@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/utils/media_query_values.dart';
 import '../../../../core/utils/constants.dart';
 
 import '../../../../core/utils/assets_manger.dart';
@@ -20,7 +21,10 @@ class _QuoteScreenState extends State<QuoteScreen> {
             msg: 'Error Happend',
             color: Colors.red,
           ),
-          child: Image.asset(ImgAssets.qoute),
+          child: Image.asset(
+            ImgAssets.qoute,
+            width: context.width,
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../core/utils/app_strings.dart';
 import '../../features/random_quote/presentation/screens/quote_screen.dart';
 
