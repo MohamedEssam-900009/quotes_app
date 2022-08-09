@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/config/routes/app_routes.dart';
-import 'package:quotes_app/features/favourite_quote/presentation/screens/favourite_quote_screen.dart';
+import '../../../../core/utils/constants.dart';
+
 import '../../../../core/utils/assets_manger.dart';
 
 class QuoteScreen extends StatefulWidget {
@@ -16,9 +16,9 @@ class _QuoteScreenState extends State<QuoteScreen> {
     return Scaffold(
       body: Center(
         child: InkWell(
-          onTap: () => Navigator.pushNamed(
-            context,
-            Routes.favouriteQuoteRoute,
+          onTap: () => Constants.showToast(
+            msg: 'Error Happend',
+            color: Colors.red,
           ),
           child: Image.asset(ImgAssets.qoute),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/config/routes/app_routes.dart';
+
+import 'config/routes/app_routes.dart';
 import 'config/themes/app_theme.dart';
 import 'core/utils/app_strings.dart';
 
