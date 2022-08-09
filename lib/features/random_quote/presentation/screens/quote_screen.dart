@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../core/utils/media_query_values.dart';
-import '../../../../core/utils/constants.dart';
-
-import '../../../../core/utils/assets_manger.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../widgets/quote_content.dart';
 
 class QuoteScreen extends StatefulWidget {
   const QuoteScreen({Key? key}) : super(key: key);
@@ -12,21 +11,35 @@ class QuoteScreen extends StatefulWidget {
 }
 
 class _QuoteScreenState extends State<QuoteScreen> {
+  Widget _buildBodyContent() {
+    return Column(
+      children: [
+        const QuoteContent(),
+        Container(
+          margin: const EdgeInsets.symmetric(vertical: 15.0),
+          padding: const EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: AppColors.primary,
+          ),
+          child: const Icon(
+            Icons.refresh,
+            size: 28.0,
+            color: Colors.white,
+          ),
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final appBar = AppBar(
+      title: const Text(AppStrings.appName),
+    );
     return Scaffold(
-      body: Center(
-        child: InkWell(
-          onTap: () => Constants.showToast(
-            msg: 'Error Happend',
-            color: Colors.red,
-          ),
-          child: Image.asset(
-            ImgAssets.qoute,
-            width: context.width,
-          ),
-        ),
-      ),
+      appBar: appBar,
+      body: _buildBodyContent(),
     );
   }
 }
